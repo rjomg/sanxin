@@ -46,7 +46,7 @@
                 <div class="panel-icon"><i class="el-icon-rank"></i></div>
                 <div class="panel-icon"><i class="el-icon-document"></i></div>
                 <div class="panel-search">
-                  <el-input placeholder="请输入关键词进行功能搜索..." v-model="input5" class="input-with-select">
+                  <el-input placeholder="请输入关键词进行功能搜索..." class="input-with-select">
                     <el-button slot="append" icon="el-icon-search"></el-button>
                   </el-input>
                 </div>
@@ -100,7 +100,7 @@ export default {
 #switch-nav {display: block;width: 100%;border-radius: 0;border:none;background: #2b394a;color: #FFF;}
 .el-aside span:first-child {background: #B3C0D1;text-align: center;display: block;}
 .el-aside .el-menu {border-right: none;background-color: #18222e !important;}
-.el-menu-vertical-demo:not(.el-menu--collapse) {width: 200px; min-height: 100%;background: #24303c;color: #FFF;}
+.el-menu-vertical-demo:not(.el-menu--collapse) {width: 140px; min-height: 100%;background: #24303c;color: #FFF;}
 .el-menu-vertical-demo .el-menu-item {color: #FFF;border-left:3px solid #18222e;}
 .el-menu-item:focus, .el-menu-item:hover {background: #2b394a;border-left:3px solid #409EFF}
 .top-panel .panel-icon {border-right: 1px solid #f5f7f9;width: 50px;text-align: center;display: inline-block;}
@@ -114,4 +114,5 @@ export default {
 .header img {width: 40px;border-radius: 40px;}
 .welcome {display: block;height: 60px;line-height: 60px;float: right;font-size: 16px;font-weight: 600;border-right: 1px solid #f5f7f9;margin-right: 20px;color: #797979;}
 .logout {float:right;font-size: 20px;font-weight: 600;width: 50px;text-align: center;}
+.el-main {padding:0;}
 </style>
