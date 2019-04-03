@@ -61,7 +61,7 @@
             </el-col>
           </el-row>
         </el-header>
-        <el-main class="main">
+        <el-main>
           <router-view/>
         </el-main>
       </el-container>
