@@ -26,7 +26,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .containerbox{height:100%; width:100%; position:fixed;}
+  .containerbox{height:100%; width:100%;}
   .title{height: 20px; width: 100%}
   .line-block{height:20px; width:2px; background-color:rgb(103,186,247); float: left;}
   .current{float:left;}
