@@ -1,3 +1,3 @@
 body{margin:0;padding:0;background: #f5f7f9;}
-.containerbox{height:100%; width:100%;}
+.containerbox{width:98%;margin: 0 auto;}
 .wrap{ width:100%; background-color:#FFFFFF; padding: 20px 0 20px 0;}

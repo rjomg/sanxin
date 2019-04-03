@@ -6,17 +6,23 @@
           <LeftPanel :navList="navList"></LeftPanel>
         </div>
       </el-col>
-      <el-col :span="17"><div class="grid-content bg-purple maing">main</div></el-col>
+      <el-col :span="17">
+        <div class="grid-content bg-purple maing">
+          <current-location :info="currentInfo"></current-location>
+        </div>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
 import LeftPanel from '@/components/LeftPanel'
+import CurrentLocation from '@/components/CurrentLocation'
 export default {
   name: 'ShopDecoration',
   components: {
-    LeftPanel
+    LeftPanel,
+    CurrentLocation
   },
   data () {
     return {
@@ -27,7 +33,11 @@ export default {
         {name: '评价管理', link: '/'},
         {name: '退货地址', link: '/'},
         {name: '配送方式', link: '/'}
-      ]
+      ],
+      currentInfo: {
+        'name': '当前位置：',
+        'title': '店铺装修'
+      }
     }
   }
 }
