@@ -1,24 +1,31 @@
 <template>
   <div class="index">
     <div class="containerbox">
-      <div class="title">
-        <div class="line-block"></div>
-        <b class="current">当前位置：</b>
-        <div class="current-color">首页</div>
-      </div>
+      <!-- 当前位置 -->
+      <current-location :info="currentInfo"></current-location>
+      <!-- 主窗口 -->
       <div class="wrap">
-        1
+        111111
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CurrentLocation from '@/components/CurrentLocation' // 头部
+
 export default {
   name: 'Index',
+  components: {
+    // 组件注册
+    CurrentLocation
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      currentInfo: {
+        'name': '当前位置：',
+        'title': '首页'
+      }
     }
   }
 }
@@ -27,9 +34,5 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .containerbox{height:100%; width:100%;}
-  .title{height: 20px; width: 100%}
-  .line-block{height:20px; width:2px; background-color:rgb(103,186,247); float: left;}
-  .current{float:left;}
-  .current-color{float: left;color:#2894FF}
-  .wrap{height:100%; width:100%; background-color:#FFFFFF}
+  .wrap{ width:100%; background-color:#FFFFFF}
 </style>
