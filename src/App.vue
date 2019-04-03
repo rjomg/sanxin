@@ -3,7 +3,7 @@
     <el-container style="height: 100%;">
       <el-aside width="200">
         <el-button id="switch-nav" v-on:click="isCollapse = !isCollapse" icon="el-icon-tickets"></el-button>
-        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+        <el-menu default-active="1-4-1" class="el-menu-vertical-demo left-menu" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
           <el-menu-item index="1">
             <i class="el-icon-location"></i>
             <span slot="title">店铺</span>
@@ -62,7 +62,69 @@
           </el-row>
         </el-header>
         <el-main>
-          <router-view/>
+          <el-row :gutter="20">
+            <el-col :span="20" class="main-panel"><div class="grid-content bg-purple"><router-view/></div></el-col>
+            <el-col :span="4" class="right-panel">
+              <div class="grid-content bg-purple">
+                <el-menu
+                  default-active="2"
+                  class="el-menu-vertical-demo"
+                  @open="handleOpen"
+                  @close="handleClose">
+                  <el-submenu index="1">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span>订单信息</span>
+                    </template>
+                    <el-menu-item-group>
+                      <el-menu-item index="1-1">选项1</el-menu-item>
+                      <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                  </el-submenu>
+                  <el-submenu index="2">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span>内容公告</span>
+                    </template>
+                    <el-menu-item-group>
+                      <el-menu-item index="1-1">选项1</el-menu-item>
+                      <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                  </el-submenu>
+                  <el-submenu index="3">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span>佣金提现</span>
+                    </template>
+                    <el-menu-item-group>
+                      <el-menu-item index="1-1">选项1</el-menu-item>
+                      <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                  </el-submenu>
+                  <el-submenu index="4">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span>评价</span>
+                    </template>
+                    <el-menu-item-group>
+                      <el-menu-item index="1-1">选项1</el-menu-item>
+                      <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                  </el-submenu>
+                  <el-submenu index="5">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span>系统提示</span>
+                    </template>
+                    <el-menu-item-group>
+                      <el-menu-item index="1-1">选项1</el-menu-item>
+                      <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                  </el-submenu>
+                </el-menu>
+              </div>
+            </el-col>
+          </el-row>
         </el-main>
       </el-container>
     </el-container>
@@ -100,9 +162,9 @@ export default {
 #switch-nav {display: block;width: 100%;border-radius: 0;border:none;background: #2b394a;color: #FFF;}
 .el-aside span:first-child {background: #B3C0D1;text-align: center;display: block;}
 .el-aside .el-menu {border-right: none;background-color: #18222e !important;}
-.el-menu-vertical-demo:not(.el-menu--collapse) {width: 140px; min-height: 100%;background: #24303c;color: #FFF;}
-.el-menu-vertical-demo .el-menu-item {color: #FFF;border-left:3px solid #18222e;}
-.el-menu-item:focus, .el-menu-item:hover {background: #2b394a;border-left:3px solid #409EFF}
+.el-aside .left-menu:not(.el-menu--collapse) {width: 190px; min-height: 100%;background: #24303c;color: #FFF;}
+.left-menu .el-menu-item {color: #FFF;border-left:3px solid #18222e;}
+.left-menu .el-menu-item:focus, .left-menu .el-menu-item:hover {background: #2b394a;border-left:3px solid #409EFF}
 .top-panel .panel-icon {border-right: 1px solid #f5f7f9;width: 50px;text-align: center;display: inline-block;}
 .top-panel .panel-icon i {font-size: 20px;}
 .top-panel .panel-search {border-right: 1px solid #f5f7f9;display: inline-block;}
@@ -115,4 +177,8 @@ export default {
 .welcome {display: block;height: 60px;line-height: 60px;float: right;font-size: 16px;font-weight: 600;border-right: 1px solid #f5f7f9;margin-right: 20px;color: #797979;}
 .logout {float:right;font-size: 20px;font-weight: 600;width: 50px;text-align: center;}
 .el-main {padding:0;}
+.el-row {margin-left: 0 !important;margin-right: 0 !important;}
+.main-panel{padding-left: 0 !important;padding-right: 0 !important;}
+.right-panel {background: #FFF;min-height: 900px;}
+.right-panel .el-menu {border-right: none;}
 </style>

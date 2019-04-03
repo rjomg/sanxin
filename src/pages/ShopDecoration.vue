@@ -7,7 +7,6 @@
         </div>
       </el-col>
       <el-col :span="17"><div class="grid-content bg-purple maing">main</div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple right">right</div></el-col>
     </el-row>
   </div>
 </template>
