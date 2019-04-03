@@ -50,12 +50,11 @@
           </el-dropdown>
           <span>Tom</span>
         </el-header>
-
-        <el-main>
+        <el-main class="main">
+          <router-view/>
         </el-main>
       </el-container>
     </el-container>
-    <!-- <router-view/> -->
   </div>
 </template>
 
@@ -93,4 +92,5 @@ export default {
 .el-menu-vertical-demo:not(.el-menu--collapse) {width: 200px; min-height: 100%;background: #24303c;color: #FFF;}
 .el-menu-vertical-demo .el-menu-item {color: #FFF;}
 .el-menu-item:focus, .el-menu-item:hover {background: #18222e;}
+.main{background-color:#F0F0F0}
 </style>
