@@ -101,8 +101,8 @@ export default {
 .el-aside span:first-child {background: #B3C0D1;text-align: center;display: block;}
 .el-aside .el-menu {border-right: none;background-color: #18222e !important;}
 .el-menu-vertical-demo:not(.el-menu--collapse) {width: 200px; min-height: 100%;background: #24303c;color: #FFF;}
-.el-menu-vertical-demo .el-menu-item {color: #FFF;}
-.el-menu-item:focus, .el-menu-item:hover {background: #2b394a;}
+.el-menu-vertical-demo .el-menu-item {color: #FFF;border-left:3px solid #18222e;}
+.el-menu-item:focus, .el-menu-item:hover {background: #2b394a;border-left:3px solid #409EFF}
 .top-panel .panel-icon {border-right: 1px solid #f5f7f9;width: 50px;text-align: center;display: inline-block;}
 .top-panel .panel-icon i {font-size: 20px;}
 .top-panel .panel-search {border-right: 1px solid #f5f7f9;display: inline-block;}
